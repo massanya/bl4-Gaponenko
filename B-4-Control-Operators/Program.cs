@@ -11,7 +11,8 @@ namespace Basic.Lesson_4._1
     {
         static void Main(string[] args)
         {
-             Console.ReadLine();
+			Practice.B4_P20_25_While_DiceGame();
+			Console.ReadLine();
         }
      }
 }
