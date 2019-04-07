@@ -9,75 +9,6 @@ namespace Basic.Lesson_4._1
 {
 	partial class Practice
 	{
-		//B4-P1/25. If_TimeOfDayGreeting
-		public static void B4_P1_25_If_TimeOfDayGreeting()
-		{
-		}
-
-		//B4-P2/25. If_NumbersComparing
-		public static void B4_P2_25_If_NumbersComparing()
-		{
-		}
-
-		//B4-P3/25. If_PositiveNumbersComparing
-		public static void B4_P3_25_If_PositiveNumbersComparing()
-		{
-		}
-
-		//B4-P4/25. If_Akinator5Numbers
-		public static void B4_P4_25_If_Akinator5Numbers()
-		{
-
-		}
-
-		//B4-P5/25. Switch_DayOfWeek
-		public static void B4_P5_25_Switch_DayOfWeek()
-		{
-		}
-
-		//B4-P6/25. Switch_GameNavigation
-		public static void B4_P6_25_Switch_GameNavigation()
-		{
-
-		}
-
-		//B4-P7/25. For_10OddEven
-		public static void B4_P7_25_For_10OddEven()
-		{
-
-		}
-
-
-		//B4-P8/25. For_3DevideNumbers
-		public static void B4_P8_25_For_3DevideNumbers()
-		{
-		}
-
-
-		//B4-P9/25. For_Matrix10x10
-		public static void B4_P9_25_For_Matrix10x10()
-		{
-
-		}
-
-
-		//B4-P10/25. For_HelloWorld
-		public static void B4_P10_25_For_HelloWorld()
-		{
-		}
-
-
-		//B4_P11/25. For_Afrochildren
-		public static void B4_P11_25_For_Afrochildren()
-		{
-
-		}
-
-
-		//B4-P12/25. For_Minus10OddEven
-		public static void B4_P12_25_For_Minus10OddEven()
-		{
-		}
 
 
 		//B4-P13/25 For_LettersCount
@@ -105,10 +36,7 @@ namespace Basic.Lesson_4._1
 		//B4-P14/25 *For_AlphabetBack
 		public static void B4_P14_25_For_AlphabetBack()
 		{
-			//char i = 'z';
-			//int birhtYearChar = Convert.ToInt16(i);//"?'
-			//char i2 = Convert.ToChar(birhtYearChar);
-			//Console.WriteLine($"bukva {i2}");
+
 			int lettera = 97;
 			int letterz = 122;
 			for (int i= letterz; i>= lettera; i--)
@@ -116,26 +44,6 @@ namespace Basic.Lesson_4._1
 				Console.WriteLine($"{Convert.ToChar(i)}");
 			}
 
-		}
-
-
-		//B4-P15/25 While_OddEventNumber
-		public static void B4_P15_25_While_OddEventNumber()
-		{
-
-		}
-
-
-		//B4-P16/25 DoWhile_OddEventNumber
-		public static void B4_P16_25_DoWhile_OddEventNumber()
-		{
-
-		}
-
-
-		//B4-P17/25 While_HelloWorld
-		public static void B4_P17_25_While_HelloWorld()
-		{
 		}
 
 
@@ -153,13 +61,6 @@ namespace Basic.Lesson_4._1
 				a=a*a;
 			}
 			Console.WriteLine(a);
-		}
-
-
-		//B4-P19/25 While_SolveNumberAdding
-		public static void B4_P19_25_While_SolveNumberAdding()
-		{
-			
 		}
 
 
@@ -247,32 +148,7 @@ namespace Basic.Lesson_4._1
                     i++;
                     half = half / 2+1;
                 }
-            
-           
-            
-            Console.ReadKey();
-
-
-
-
-
-
-			
-
-		}
-
-
-		//B4-P23/25 IfElse_Calcultor
-		public static void B4_P23_25_IfElse_Calcultor()
-		{
-
-		}
-
-
-		//B4-P24_25 Switch_Calculator
-		public static void B4_P24_25_Switch_Calculator()
-		{
-
+           Console.ReadKey();
 		}
 
 
