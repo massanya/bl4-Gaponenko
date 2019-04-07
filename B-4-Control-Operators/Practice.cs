@@ -159,7 +159,7 @@ namespace Basic.Lesson_4._1
 		//B4-P19/25 While_SolveNumberAdding
 		public static void B4_P19_25_While_SolveNumberAdding()
 		{
-
+			
 		}
 
 
@@ -167,63 +167,16 @@ namespace Basic.Lesson_4._1
 		public static void B4_P20_25_While_DiceGame()
 		{
 			const int itog = 25;
-			int sum1 = 0, sum2 = 0;
-			string reply;
+			int sum = 0;
 			var rnd = new Random();
-			do
-			{
-				Console.WriteLine("Бросить кость для Вас?(y/n)");
-				do
-				{
-					reply = Console.ReadLine();
-				} while (sum1<itog);
-
-				if (reply == "y")
-				{
-					var count = rnd.Next(1, 6);
-					Console.WriteLine("Выпало {0} очков", count);
-					sum1 += count;
-					if (sum1 >= itog)
-					{
-						break;
-					}
-					if (sum2 < 18)
-					{
-						count = rnd.Next(1, 5);
-						Console.WriteLine("Мне выпало очков {0}", count);
-						sum2 += count;
-						Console.WriteLine("У меня всего {0} очков", sum1);
-						if (sum1 >= itog)
-						{
-							break;
-						}
-					}
-					else
-					{
-						Console.WriteLine("Я пас.Будете продолжать? (y/n)");
-						do
-						{
-							reply = Console.ReadLine();
-						} while (WaitYesNoInput(reply));
-						if (reply.ToUpper() == "N")
-						{
-							break;
-						}
-					}
-
-				}
-			} while (reply.ToUpper() != "N");
-			if (sum1 > itog) Console.WriteLine("Вы проиграли!");
-			else if (sum2 > itog) Console.WriteLine("Я проиграл");
-			else if (sum1 < sum2) Console.WriteLine("Я выиграл!");
-			else if (sum1 == sum2) Console.WriteLine("Ничья!");
-			Console.ReadLine();
-		}
-
-		private static bool WaitYesNoInput(string reply)
-		{
-			return !new[] { "Y", "N" }.Contains(reply.ToUpper());
-		}
+			int i=0;
+			while(sum<itog){
+				i++;
+				var count = rnd.Next(1, 6);	
+				sum +=count;
+				Console.WriteLine($"На {i} шаге выпало {count} очков. Всего {sum}");
+			}
+		}	
 
 
 
@@ -231,13 +184,80 @@ namespace Basic.Lesson_4._1
 		//B4-P21/25 *While_DiceGameMultiplePlayers
 		public static void dB4_P21_25_While_DiceGameMultiplePlayers()
 		{
-
+			const int itog = 25;
+			int sum1 = 0, sum2 = 0;
+			var rnd = new Random();
+			int i1=0,i2=0;
+			while(sum1<itog||sum2<itog){
+				i1++;
+				i2++;
+				var count1 = rnd.Next(1, 6);	
+				sum1 +=count1;
+				Console.WriteLine($"1 игроку на {i1} шаге выпало {count1} очков. Всего {sum1} очков");
+				var count2 = rnd.Next(1, 6);	
+				sum2 +=count2;
+				Console.WriteLine($"2 игроку на {i2} шаге выпало {count2} очков. Всего {sum2} очков");
+				if (sum2>=itog&sum1>=itog){
+					Console.WriteLine($"2 игрок набрал на {i2} шаге {sum2} очков.Ничья");
+					Console.WriteLine($"1 игрок набрал на {i1} шаге {sum1} очков.Ничья");
+					break;
+				}
+				if (sum1>=itog){
+					Console.WriteLine($"1 игрок победил на {i1} шаге, набрав {sum1} очков");
+					Console.WriteLine($"2 игрок проиграл на {i2} шаге, набрав {sum2} очков");
+					break;
+				}
+				if (sum2>=itog){
+					Console.WriteLine($"2 игрок победил на {i2} шаге, набрав {sum2} очков");
+					Console.WriteLine($"1 игрок проиграл на {i1} шаге, набрав {sum1} очков");
+					break;
+				}
+				
+			}
 		}
 
 
 		//B4-P22_25 *While_Akinator100Numbers
 		public static void B4_P22_25_While_Akinator100Numbers()
 		{
+			 Console.WriteLine("Загадайте число от 1 до 100");
+            Console.ReadKey();
+ 
+            int n = 50, half = 25, i = 1;
+            char reply;
+                while (i<10)
+                {
+                    Console.WriteLine($"Ваше число меньше, больше или равно {n}? (</>/=)");
+		            reply=Console.ReadKey().KeyChar;
+					Console.WriteLine();
+                    if (reply== '=')
+                    {
+                        Console.WriteLine($"Я угадал число {n} c {i} раза");
+                        break;
+                    }
+                    else if (reply== '>')
+                    {
+                        n = n + half;
+                    }
+                    else if (reply== '<')
+                    {
+                        n = n - half;
+                    } 
+                    
+                    i++;
+                    half = half / 2+1;
+                }
+            
+           
+            
+            Console.ReadKey();
+
+
+
+
+
+
+			
 
 		}
 
@@ -259,6 +279,15 @@ namespace Basic.Lesson_4._1
 		//B4-P25/25 Cycle_WordRevercse
 		public static void B4_P25_25_Cycle_WordRevercse()
 		{
+			Console.WriteLine("Vvedite slovo");
+			string word = Console.ReadLine();
+			for (int i = word.Length-1; i>=0; i--)
+			{
+				Console.WriteLine($"{word[i]}");
+				
+			}
+			Console.WriteLine();
+			
 		}
 	}
 }

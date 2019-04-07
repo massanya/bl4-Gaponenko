@@ -11,7 +11,7 @@ namespace Basic.Lesson_4._1
     {
         static void Main(string[] args)
         {
-			Practice.B4_P20_25_While_DiceGame();
+			Practice.B4_P22_25_While_Akinator100Numbers();
 			Console.ReadLine();
         }
      }
